@@ -1,0 +1,362 @@
+ // const teamMembers = [
+  //   {
+  //     name: "Calvin Durant1",
+  //     position: "Chief Executive",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic1,
+  //     links: {
+  //       fbLink: "https://facebook.com/calvin",
+  //       instaLink: "https://instagram.com/calvin",
+  //       ytLink: "https://youtube.com/calvin",
+  //       twitterLink: "https://twitter.com/calvin",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Amely Norwood2",
+  //     position: "Law Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic2,
+  //     links: {
+  //       fbLink: "https://facebook.com/amely",
+  //       instaLink: "https://instagram.com/amely",
+  //       ytLink: "https://youtube.com/amely",
+  //       twitterLink: "https://twitter.com/amely",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas3",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Amely Norwood4",
+  //     position: "Law Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic2,
+  //     links: {
+  //       fbLink: "https://facebook.com/amely",
+  //       instaLink: "https://instagram.com/amely",
+  //       ytLink: "https://youtube.com/amely",
+  //       twitterLink: "https://twitter.com/amely",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas5",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas6",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Calvin Durant1",
+  //     position: "Chief Executive",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic1,
+  //     links: {
+  //       fbLink: "https://facebook.com/calvin",
+  //       instaLink: "https://instagram.com/calvin",
+  //       ytLink: "https://youtube.com/calvin",
+  //       twitterLink: "https://twitter.com/calvin",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Amely Norwood2",
+  //     position: "Law Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic2,
+  //     links: {
+  //       fbLink: "https://facebook.com/amely",
+  //       instaLink: "https://instagram.com/amely",
+  //       ytLink: "https://youtube.com/amely",
+  //       twitterLink: "https://twitter.com/amely",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas3",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Amely Norwood4",
+  //     position: "Law Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic2,
+  //     links: {
+  //       fbLink: "https://facebook.com/amely",
+  //       instaLink: "https://instagram.com/amely",
+  //       ytLink: "https://youtube.com/amely",
+  //       twitterLink: "https://twitter.com/amely",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas5",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas6",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Calvin Durant1",
+  //     position: "Chief Executive",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic1,
+  //     links: {
+  //       fbLink: "https://facebook.com/calvin",
+  //       instaLink: "https://instagram.com/calvin",
+  //       ytLink: "https://youtube.com/calvin",
+  //       twitterLink: "https://twitter.com/calvin",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Amely Norwood2",
+  //     position: "Law Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic2,
+  //     links: {
+  //       fbLink: "https://facebook.com/amely",
+  //       instaLink: "https://instagram.com/amely",
+  //       ytLink: "https://youtube.com/amely",
+  //       twitterLink: "https://twitter.com/amely",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas3",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Amely Norwood4",
+  //     position: "Law Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic2,
+  //     links: {
+  //       fbLink: "https://facebook.com/amely",
+  //       instaLink: "https://instagram.com/amely",
+  //       ytLink: "https://youtube.com/amely",
+  //       twitterLink: "https://twitter.com/amely",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas5",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas6",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Calvin Durant1",
+  //     position: "Chief Executive",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic1,
+  //     links: {
+  //       fbLink: "https://facebook.com/calvin",
+  //       instaLink: "https://instagram.com/calvin",
+  //       ytLink: "https://youtube.com/calvin",
+  //       twitterLink: "https://twitter.com/calvin",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Amely Norwood2",
+  //     position: "Law Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic2,
+  //     links: {
+  //       fbLink: "https://facebook.com/amely",
+  //       instaLink: "https://instagram.com/amely",
+  //       ytLink: "https://youtube.com/amely",
+  //       twitterLink: "https://twitter.com/amely",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas3",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Amely Norwood4",
+  //     position: "Law Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic2,
+  //     links: {
+  //       fbLink: "https://facebook.com/amely",
+  //       instaLink: "https://instagram.com/amely",
+  //       ytLink: "https://youtube.com/amely",
+  //       twitterLink: "https://twitter.com/amely",
+  //     },
+  //     type: "core team",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas5",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Chennai",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "mentor",
+  //   },
+  //   {
+  //     name: "Caitlin Thomas6",
+  //     position: "Lead Consultant",
+  //     description:
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     city: "Coimbatore",
+  //     image: pic3,
+  //     links: {
+  //       fbLink: "https://facebook.com/caitlin",
+  //       instaLink: "https://instagram.com/caitlin",
+  //       ytLink: "https://youtube.com/caitlin",
+  //       twitterLink: "https://twitter.com/caitlin",
+  //     },
+  //     type: "mentor",
+  //   },
+  // ];

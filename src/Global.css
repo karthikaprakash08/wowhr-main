@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Antic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button,
+a {
+  outline: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #089ede;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  background-color: rgb(255, 255, 255);
+}
+
+.custom-border {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 70px;
+  height: 3px;
+  background-color: white;
+  clip-path: polygon(0 100%, 95% 100%, 100% 0, 5% 0);
+}
+
+.select-selected {
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding-right: 30px;
+}
+
+.select-selected:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 11px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #089ede transparent transparent transparent;
+  transition: all 0.3s ease;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #089ede transparent;
+  transform: translateY(-50%);
+}
+
+.select-items {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.select-items.select-show {
+  opacity: 1;
+  overflow-y: scroll;
+  max-height: 100px;
+  transition: all 0.3s ease;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.afterPoint {
+  position: relative;
+}
+
+.afterPoint::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.afterPoint:hover::after {
+  width: 7px;
+  height: 7px;
+  bottom: -15px;
+  background-color: #089ede;
+}

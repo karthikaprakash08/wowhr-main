@@ -1,0 +1,164 @@
+  const knowledgeData = [
+    {
+      type: "pepTalks",
+      videoSrc: "https://www.youtube.com/embed/zqR8bw8bqdM",
+      title: "BUILDING & SUSTAINING A CAREER IN HR",
+      description:
+        "Why everyone on your sales team will benefit from our app's killer features.",
+      authorImg: mini1,
+      linkedInLink: "https://linkedin.com/",
+      authorName: "Kathryn Murphy",
+    },
+    {
+      type: "pepTalks",
+      videoSrc: "https://www.youtube.com/embed/pWNb26syJaY",
+      title: "Pep Talk Series 2 L&D Models for Hybrid Workforce",
+      description:
+        "The teams best prepared for change use modern digital communication tools, feel comfortable learning new ones and continually adapt how they work.",
+      authorImg: mini2,
+      linkedInLink: "https://linkedin.com/",
+      authorName: "Devon Lane",
+    },
+    {
+      type: "pepTalks",
+      videoSrc: "https://www.youtube.com/embed/2Aa-es8Os1o",
+      title: "New Logo Launch",
+      description:
+        "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
+      authorImg: mini3,
+      linkedInLink: "https://linkedin.com/",
+      authorName: "Theresa Webb",
+    },
+    {
+      type: "pepTalks",
+      videoSrc: "https://www.youtube.com/embed/zqR8bw8bqdM",
+      title: "WOW HR Reaches the height.",
+      description:
+        "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
+      authorImg: mini3,
+      linkedInLink: "https://linkedin.com/",
+      authorName: "Theresa Webb",
+    },
+    {
+      type: "pepTalks",
+      videoSrc: "https://www.youtube.com/embed/zqR8bw8bqdM",
+      title: "WOW HR Reaches the height.",
+      description:
+        "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
+      authorImg: mini3,
+      linkedInLink: "https://linkedin.com/",
+      authorName: "Theresa Webb",
+    },
+    {
+      type: "pepTalks",
+      videoSrc: "https://www.youtube.com/embed/zqR8bw8bqdM",
+      title: "WOW HR Reaches the height.",
+      description:
+        "The executive producer of Dotto Tech shares his favorite Slack strategies for conquering common challenges in the digital-first workplace.",
+      authorImg: mini3,
+      linkedInLink: "https://linkedin.com/",
+      authorName: "Theresa Webb",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 1",
+      description: "spotify 1 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 2",
+      description: "spotify 2 description",
+    },
+    {
+      type: "podcast",
+      spotifySrc:
+        "https://open.spotify.com/embed/episode/69DSpec8AkUAV6nxZqv6og",
+      title: "spotify 1",
+      description: "spotify 3 description",
+    },
+    {
+      type: "LearningPrograms",
+      videoSrc: "https://www.youtube.com/embed/zqR8bw8bqdM",
+      title: "LearningPrograms 1",
+      description: "LearningPrograms 1",
+    },
+    {
+      type: "LearningPrograms",
+      videoSrc: "https://www.youtube.com/embed/zqR8bw8bqdM",
+      title: "LearningPrograms 2",
+      description: "LearningPrograms 2",
+    },
+    {
+      type: "LearningPrograms",
+      videoSrc: "https://www.youtube.com/embed/zqR8bw8bqdM",
+      title: "LearningPrograms 3",
+      description: "LearningPrograms 3",
+    },
+  ];
