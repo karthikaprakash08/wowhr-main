@@ -33,8 +33,8 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="flex flex-col items-center justify-center h-full gap-10 px-5 py-5 bg-white">
       <div className="max-w-2xl mb-5 text-center">
-        <div className="text-xl font-semibold">TESTIMONIALS</div>
-        <p className="text-lg mt-2">
+        <div className="mb-5 text-xl font-semibold leading-tight text-center md:text-3xl xl:text-3xl xl:mb-9 font-jost">TESTIMONIALS</div>
+        <p className="text-lg mt-1 font-bold">
           Testimonials highlight the transformative impact of WoW HR's initiatives, empowering individuals to achieve professional excellence and leadership growth through our skill development programs.
         </p>
       </div>

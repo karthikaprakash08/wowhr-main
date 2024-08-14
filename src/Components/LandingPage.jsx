@@ -13,7 +13,7 @@ const LandingPage = () => {
   return (
     <section
       id="home"
-      className="bg-white cursor-default xl:h-[87vh] xl:flex overflow-hidden"
+      className="bg-white cursor-default xl:h-[92vh] xl:flex overflow-hidden"
     >
       <div className=" xl:w-1/2">
         <img
@@ -28,85 +28,86 @@ const LandingPage = () => {
           id="socialAnchor"
         >
           <div
-            className=" xl:mb-12 mb-4 font-semibold font-jost text-xl md:text-4xl xl:text-5xl tracking-[-0.06em] leading-[1.25]"
+            className="xl:mb-6 mb-2 font-bold font-jost text-xl md:text-4xl xl:text-5xl tracking-[-0.06em] leading-[1.25]"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            ENHANCE YOUR GLOBAL GROWTH WITH{" "}
-            <span className="font-semibold text-defaultBlue font-jost">
-              WOW HR
+            Welcome to&nbsp;   
+            <span className="font-bold text-defaultBlue font-jost">
+              WOW HR&nbsp;  
             </span>
+            <br />
+            Sharing Knowledge, Shaping Future
           </div>
           <div
-            className="xl:mb-7 mb-4 text-xs  xl:text-lg md:text-base font-semibold tracking-wider leading-[1.2]"
+            className="xl:mb-7 mb-4 text-xs xl:text-lg md:text-base font-semibold tracking-wider leading-[1.2]"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            WoW HR, a not-for-profit organization intended to create a WoW
-            factor among HR Fraternities and Students community through Skill
-            development.
+            WoW HR, a not-for-profit organization intended to create a WoW factor among HR Fraternities and Students community through Skill development. We focus on the segment of Skill Development which supports the individual's to enhance their professional development and developing future leaders. A step forward, we intend to provide exclusive learning experience through different learning formats by Industrial experts.
           </div>
-          <div className="flex xl:mb-10 mb-7" data-aos="fade-up">
+          <div className="flex-col mt-auto xl:mb-10 mb-7" data-aos="fade-up">
             <a
               href="https://wowhr.in/badge/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <button className="bg-darkBlue  font-jost text-white text-[.6rem] md:text-base xl:text-sm xl:hover:shadow-lg px-2 md:px-8 xl:px-6 min-w-24 xl:min-w-36 py-2 xl:py-3 font-medium rounded-md xl:hover:bg-[#089adec1] xl:hover:text-white transition-all duration-200 xl:hover:scale-[1.02] xl:hover:translate-y-[-.1rem]">
-                JOIN US
+                  JOIN US
               </button>
             </a>
-          </div>
-          <div className="flex gap-3 mt-auto ">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-aos="fade-up"
-              data-aos-duration="250"
-              data-aos-anchor="#socialAnchor"
-            >
-              <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
-                <Facebook className="w-full h-auto" />
-              </div>
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-anchor="#socialAnchor"
-            >
-              <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
-                <Instagram className="w-full h-auto" />
-              </div>
-            </a>
-            <a
-              href="https://www.github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-aos="fade-up"
-              data-aos-duration="750"
-              data-aos-anchor="#socialAnchor"
-            >
-              <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
-                <Github className="w-full h-auto" />
-              </div>
-            </a>
-            <a
-              href="https://www.x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-anchor="#socialAnchor"
-            >
-              <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
-                <Twitter className="w-full h-auto" />
-              </div>
-            </a>
-          </div>
+            
+            <div className="flex gap-3 mt-7 " >
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="250"
+                data-aos-anchor="#socialAnchor"
+              >
+                <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
+                  <Facebook className="w-full h-auto" />
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-anchor="#socialAnchor"
+              >
+                <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
+                  <Instagram className="w-full h-auto" />
+                </div>
+              </a>
+              <a
+                href="https://www.github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="750"
+                data-aos-anchor="#socialAnchor"
+              >
+                <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
+                  <Github className="w-full h-auto" />
+                </div>
+              </a>
+              <a
+                href="https://www.x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-anchor="#socialAnchor"
+              >
+                <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
+                  <Twitter className="w-full h-auto" />
+                </div>
+              </a>
+            </div>
+            </div>
         </div>
       </div>
       <div

@@ -10,7 +10,7 @@ const AboutUs = () => {
   return (
     <section
       id="about-us"
-      className="flex flex-col items-center justify-center h-full overflow-hidden bg-white cursor-default py-7 xl:pt-0 xl:min-h-[92vh] xl:items-center xl:flex-row xl:gap-20 xl:px-28 xl:py-0"
+      className="flex flex-col items-center justify-center h-full overflow-hidden bg-white cursor-default py-7 xl:pt-0 xl:min-h-[98vh] xl:items-center xl:flex-row xl:gap-20 xl:px-28 xl:py-0"
     >
       <div
         className={`w-[50%] mb-7 ${
