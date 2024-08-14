@@ -304,9 +304,9 @@ const LeaderShip = () => {
                                 </div>
                               </a>
                             )}
-                            {member.linkedin && (
+                            {member.linkedIn && (
                               <a
-                                href={member.linkedin}
+                                href={member.linkedIn}
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
