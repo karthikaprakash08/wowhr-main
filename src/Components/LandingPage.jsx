@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import pic from "../assets/Images/homePic.jpg";
 import framedStar from "../assets/SVG/framedStar.svg";
-import { Facebook, Github, Twitter, Instagram } from "lucide-react";
+import { Facebook, Github, Twitter, Instagram, Linkedin } from "lucide-react";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -68,6 +68,18 @@ const LandingPage = () => {
               >
                 <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
                   <Facebook className="w-full h-auto" />
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/wow-hr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="250"
+                data-aos-anchor="#socialAnchor"
+              >
+                <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
+                  <Linkedin className="w-full h-auto" />
                 </div>
               </a>
               <a

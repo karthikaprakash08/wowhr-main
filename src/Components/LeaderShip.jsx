@@ -14,8 +14,10 @@ import useFetchLeadership from "../Data/useFetchLeadership.js";
 
 const LeaderShip = () => {
   // const [isOpen, setIsOpen] = useState(false);
+  const [cityLoading, setCityLoading] = useState(false);
   const [selectedType, setSelectedType] = useState("Mentor");
   const [selectedCity, setSelectedCity] = useState("SELECT CITY");
+  const [cityData, setCityData] = useState({ mentors: true, coreTeam: true });
 
   const { leadershipData, loading, error, errorMsg } = useFetchLeadership();
 
@@ -25,13 +27,46 @@ const LeaderShip = () => {
   // Dynamic
   const cities = [...new Set(leadershipData.map((x) => x.location))];
 
+  // Type
+  useEffect(() => {
+    setCityData({ mentors: true, coreTeam: true });
+    if (selectedCity !== "SELECT CITY") {
+      const filteredData = leadershipData.filter(
+        (data) => data.location === selectedCity
+      );
+
+      const mentors = filteredData.some((data) => data.leaderType === "Mentor");
+      const coreTeam = filteredData.some(
+        (data) => data.leaderType === "Core Team"
+      );
+
+      setCityData({ mentors, coreTeam });
+    } else {
+      setCityData({ mentors: true, coreTeam: true });
+    }
+  }, [selectedCity, leadershipData]);
+
   const handleOptionClick = (city) => {
+    setCityLoading(true);
     setSelectedCity(city);
+    if (cityData.mentors) {
+      setSelectedType("Mentor");
+    } else {
+      setSelectedType("Core Team");
+    }
     // setIsOpen(false);
+
+    setTimeout(() => {
+      setCityLoading(false);
+    }, 350);
   };
 
   const handleTypeClick = (type) => {
+    setCityLoading(true);
     setSelectedType(type);
+    setTimeout(() => {
+      setCityLoading(false);
+    }, 350);
   };
 
   const filteredMembers = leadershipData.filter((member) => {
@@ -43,7 +78,9 @@ const LeaderShip = () => {
 
   // SLIDeeer
 
-  const itemsPerPageEvents = 3;
+  const { width } = useScreenSize();
+  const isSmallScreen = width < 640;
+  const itemsPerPageEvents = !isSmallScreen ? 3 : 2;
 
   const [currentIndexEvents, setCurrentIndexEvents] = useState(0);
   const [isHoveredEvents, setIsHoveredEvents] = useState(false);
@@ -97,17 +134,14 @@ const LeaderShip = () => {
 
   // bp
 
-  const { width } = useScreenSize();
-  const isSmallScreen = width < 640;
-
   const translateXValue = !isSmallScreen
     ? currentIndexEvents * (102.2 / itemsPerPageEvents)
-    : currentIndexEvents * (152 / itemsPerPageEvents);
+    : currentIndexEvents * (100 / itemsPerPageEvents);
 
   return (
     <section
       id="leadership"
-      className="flex flex-col items-end justify-between h-full overflow-hidden text-white cursor-default bg-defaultBlue xl:h-screen"
+      className="flex flex-col items-end justify-between h-full overflow-hidden text-white cursor-default bg-defaultBlue xl:h-[102vh]"
     >
       <div className="relative w-full mb-24 bg-white xl:mb-0 h-14 xl:h-16">
         <img
@@ -117,7 +151,7 @@ const LeaderShip = () => {
         />
       </div>
       {loading ? (
-        <div className="flex items-center justify-center w-full h-full xl:h-[50vh] bg-defaultBlue">
+        <div className="flex items-center justify-center w-full h-[78vh] xl:h-[50vh] bg-defaultBlue">
           <LoaderCircle className="w-12 h-12 text-white animate-spin" />
         </div>
       ) : error ? (
@@ -202,7 +236,7 @@ const LeaderShip = () => {
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
-                <div className="flex justify-around p-2 rounded-lg">
+                <div className="flex justify-around py-2 rounded-lg">
                   {cities.map((city) => (
                     <button
                       key={city}
@@ -224,27 +258,31 @@ const LeaderShip = () => {
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
-                <button
-                  className={`hover:text-white transition-all duration-300 xl:hover:border-white py-1 md:text-xl text-sm 
+                {cityData.mentors && (
+                  <button
+                    className={`hover:text-white transition-all duration-300 xl:hover:border-white py-1 md:text-xl text-sm 
                 min-w-36 xl:text-xl font-medium text-left border-b-2  md:min-w-52 xl:min-w-72 font-jost ${
                   selectedType === "Mentor"
                     ? "text-white border-white"
                     : "text-gray-500 border-gray-500 "
                 } `}
-                  onClick={() => handleTypeClick("Mentor")}
-                >
-                  MENTOR
-                </button>
-                <button
-                  className={`py-1 md:min-w-52 text-sm min-w-36 md:text-xl xl:hover:text-white transition-all duration-300 xl:hover:border-white  xl:text-xl font-medium text-left  border-b-2 border-gray-400 xl:min-w-72 font-jost ${
-                    selectedType === "Core Team"
-                      ? "text-white border-white"
-                      : "text-gray-500 border-gray-500 "
-                  } `}
-                  onClick={() => handleTypeClick("Core Team")}
-                >
-                  CORE TEAM
-                </button>
+                    onClick={() => handleTypeClick("Mentor")}
+                  >
+                    MENTOR
+                  </button>
+                )}
+                {cityData.coreTeam && (
+                  <button
+                    className={`py-1 md:min-w-52 text-sm min-w-36 md:text-xl xl:hover:text-white transition-all duration-300 xl:hover:border-white  xl:text-xl font-medium text-left  border-b-2 border-gray-400 xl:min-w-72 font-jost ${
+                      selectedType === "Core Team"
+                        ? "text-white border-white"
+                        : "text-gray-500 border-gray-500 "
+                    } `}
+                    onClick={() => handleTypeClick("Core Team")}
+                  >
+                    CORE TEAM
+                  </button>
+                )}
               </div>
               <div
                 className="relative items-center justify-center overflow-hidden "
@@ -259,7 +297,16 @@ const LeaderShip = () => {
                     transform: `translateX(-${translateXValue}%)`,
                   }}
                 >
-                  {filteredMembers.length > 0 ? (
+                  {cityLoading ? (
+                    <div className="relative flex-shrink-0 mx-[.27rem] xl:mx-[.3rem] md:mx-[.3rem] overflow-hidden bg-gray-100 text-black w-40 xl:w-72 md:w-72">
+                      <div className="flex justify-center items-center w-40 md:w-72 xl:w-72 h-[12rem] xl:h-[25.5rem] md:h-[24rem] font-jost transition-all shadow-lg duration-300">
+                        <LoaderCircle
+                          className="w-12 h-12 animate-spin"
+                          style={{ animationDuration: "0.6s" }}
+                        />
+                      </div>
+                    </div>
+                  ) : filteredMembers.length > 0 ? (
                     filteredMembers.map((member, index) => (
                       <div
                         key={index}
@@ -272,7 +319,7 @@ const LeaderShip = () => {
                         />
 
                         <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto right-0 p-3 xl:p-4 xl:py-5 text-white transition-transform duration-300 ease-in-out bg-darkBlue border-b-4  translate-y-full  group-hover:translate-y-0">
-                          <h3 className="mb-1 text-base font-semibold leading-[1.1] text-center xl:leading-normal xl:text-lg line-clamp-2 xl:line-clamp-4">
+                          <h3 className="mb-1  text-sm sm:text-base font-semibold leading-[1.1] text-center xl:leading-normal xl:text-lg line-clamp-2 xl:line-clamp-4">
                             {member.name}
                           </h3>
                           <p className="text-[.6rem] xl:text-[.65rem] mb-2 xl:mb-5 text-center font-medium line-clamp-3">
@@ -288,7 +335,7 @@ const LeaderShip = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <div className="w-5 h-5 p-2 text-xs transition-all duration-200 rounded-full cursor-pointer bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
+                                <div className="w-5 h-5 p-[6px] text-xs transition-all duration-200 rounded-full cursor-pointer xl:p-2 bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
                                   <Github className="w-full h-full text-inherit" />
                                 </div>
                               </a>
@@ -299,7 +346,7 @@ const LeaderShip = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <div className="w-5 h-5 p-2 text-xs transition-all duration-200 rounded-full cursor-pointer bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
+                                <div className="w-5 h-5 p-[6px] text-xs transition-all duration-200 rounded-full cursor-pointer xl:p-2 bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
                                   <Instagram className="w-full h-full text-inherit" />
                                 </div>
                               </a>
@@ -310,7 +357,7 @@ const LeaderShip = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <div className="w-5 h-5 p-2 text-xs transition-all duration-200 rounded-full cursor-pointer bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
+                                <div className="w-5 h-5 p-[6px] text-xs transition-all duration-200 rounded-full cursor-pointer xl:p-2 bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
                                   <Linkedin className="w-full h-full text-inherit" />
                                 </div>
                               </a>
@@ -321,7 +368,7 @@ const LeaderShip = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <div className="w-5 h-5 p-2 text-xs transition-all duration-200 rounded-full cursor-pointer bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
+                                <div className="w-5 h-5 p-[6px] text-xs transition-all duration-200 rounded-full cursor-pointer xl:p-2 bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
                                   <Twitter className="w-full h-full text-inherit" />
                                 </div>
                               </a>
@@ -329,7 +376,7 @@ const LeaderShip = () => {
                           </div>
                         </div>
                         <div className="absolute shadow-lg bottom-0 left-0 w-[85%] mx-auto text-center right-0 xl:p-4 p-2 text-white transition-all duration-300 border-b-4 bg-darkBlue group-hover:opacity-0 translate-y-0 group-hover:translate-y-full">
-                          <h3 className="mb-1 text-base font-semibold leading-tight text-center xl:leading-normal xl:text-lg line-clamp-2 xl:line-clamp-4">
+                          <h3 className="mb-1 text-sm font-semibold leading-tight text-center sm:text-base xl:leading-normal xl:text-lg line-clamp-2 xl:line-clamp-4">
                             {member.name}
                           </h3>
                           <p className="text-[.65rem] text-center font-medium line-clamp-3">
@@ -340,7 +387,7 @@ const LeaderShip = () => {
                     ))
                   ) : (
                     <div className="relative flex-shrink-0 mx-[.27rem] xl:mx-[.3rem] md:mx-[.3rem] overflow-hidden bg-gray-100 text-black w-40 xl:w-72 md:w-72">
-                      <div className="flex justify-center items-center w-40 md:w-72 xl:w-72 h-[12rem] xl:h-[24rem] md:h-[24rem] font-jost transition-all shadow-lg duration-300">
+                      <div className="flex justify-center items-center w-40 md:w-72 xl:w-72 h-[12rem] xl:h-[25.5rem] md:h-[24rem] font-jost transition-all shadow-lg duration-300">
                         Data not available
                       </div>
                     </div>

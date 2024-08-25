@@ -81,7 +81,8 @@ const Knowledge = () => {
           KNOWLEGDE HUB
         </div>
         <div className="text-sm xl:text-lg font-semibold text-left md:leading-[1.7] md:text-xl tracking-wider xl:leading-[1.55] mx-auto">
-        WoW HR's Knowledge Hub serves as a central resource for continuous learning, providing access to valuable insights, expert guidance, and skill-enhancing content that empowers HR professionals and students to excel in their careers.{" "}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
         </div>
       </div>
       <div
@@ -121,8 +122,8 @@ const Knowledge = () => {
         </button>
       </div>
       {loading ? (
-        <div className="flex items-center justify-center w-full h-full xl:h-[50vh] bg-white">
-          <LoaderCircle className="w-12 h-12 text-defaultBlue animate-spin" />
+        <div className="flex items-center justify-center w-full h-[60vh] xl:h-[50vh] bg-black  bg-opacity-70">
+          <LoaderCircle className="w-12 h-12 text-white animate-spin" />
         </div>
       ) : error ? (
         <div className="flex items-center justify-center w-full h-[25vh] xl:h-[50vh] xl:text-2xl text-white bg-red-500">
@@ -192,54 +193,64 @@ const Knowledge = () => {
             </div>
           )}
           {selectedType === "podcast" && (
-            <div
-              className="flex gap-6 px-5 transition-transform duration-300 ease-in-out xl:px-0 xl:gap-9 md:gap-9"
-              style={{
-                transform: `translateX(-${
-                  currentIndexHub *
-                  ((isSmallScreen ? 188 : 103) / itemsPerPageHub)
-                }%)`,
-              }}
-            >
-              {filteredDataHub.map((x, i) => (
-                <div
-                  key={i}
-                  className="bg-white my-4 shadow-[0_4px_10px_rgb(0,0,0,0.2)] rounded-lg w-72"
-                  onMouseEnter={() => setIsHoveredHub(true)}
-                  onMouseLeave={() => setIsHoveredHub(false)}
-                >
-                  <div className="p-2 w-72 h-28 xl:h-48 md:h-48">
-                    <iframe
-                      src={`https://open.spotify.com/embed/${
-                        x.mediaUrl.includes("/track/") ? "track" : "episode"
-                      }/${
-                        x.mediaUrl
-                          .split(
-                            x.mediaUrl.includes("/track/")
-                              ? "/track/"
-                              : "/episode/"
-                          )[1]
-                          .split("?")[0]
-                      }`}
-                      width="100%"
-                      height="100%"
-                      frameBorder="0"
-                      allow="encrypted-media"
-                    ></iframe>
-                  </div>
-                  <div className="flex flex-col h-24 gap-2 p-2 xl:gap-3 xl:p-3 xl:h-32">
-                    <a
-                      href={x.mediaUrl}
-                      className="text-sm xl:text-xl md:text-lg  font-jost leading-[1.1] duration-300 xl:hover:-translate-y-1 transition-all xl:hover:text-darkBlue  xl:leading-[1.1] cursor-pointer font-[500] text-defaultBlue line-clamp-2 uppercase xl:hover:underline"
-                    >
-                      {x.title}
-                    </a>
-                    <div className="text-xs xl:text-sm leading-[1.4] font-bold line-clamp-3">
-                      {x.description}
+            <div className="">
+              <div
+                className="px-3 py-2 text-xs font-medium text-center text-white rounded-full shadow-lg md:px-4 md:text-lg bg-lightBlue w-max font-jost"
+                data-aos="fade-up"
+                data-aos-duration="200"
+              >
+                <span className="text-xs md:text-lg ">&#8226;</span> SERIES :
+                WOWHR PEOPLE
+              </div>
+              <div
+                className="flex gap-6 transition-transform duration-300 ease-in-out md:px-5 xl:px-0 xl:gap-9 md:gap-9"
+                style={{
+                  transform: `translateX(-${
+                    currentIndexHub *
+                    ((isSmallScreen ? 188 : 103) / itemsPerPageHub)
+                  }%)`,
+                }}
+              >
+                {filteredDataHub.map((x, i) => (
+                  <div
+                    key={i}
+                    className="bg-white my-4 shadow-[0_4px_10px_rgb(0,0,0,0.2)] rounded-lg w-72"
+                    onMouseEnter={() => setIsHoveredHub(true)}
+                    onMouseLeave={() => setIsHoveredHub(false)}
+                  >
+                    <div className="p-2 w-72 h-28 xl:h-48 md:h-48">
+                      <iframe
+                        src={`https://open.spotify.com/embed/${
+                          x.mediaUrl.includes("/track/") ? "track" : "episode"
+                        }/${
+                          x.mediaUrl
+                            .split(
+                              x.mediaUrl.includes("/track/")
+                                ? "/track/"
+                                : "/episode/"
+                            )[1]
+                            .split("?")[0]
+                        }`}
+                        width="100%"
+                        height="100%"
+                        frameBorder="0"
+                        allow="encrypted-media"
+                      ></iframe>
+                    </div>
+                    <div className="flex flex-col h-24 gap-2 p-2 xl:gap-3 xl:p-3 xl:h-32">
+                      <a
+                        href={x.mediaUrl}
+                        className="text-sm xl:text-xl md:text-lg  font-jost leading-[1.1] duration-300 xl:hover:-translate-y-1 transition-all xl:hover:text-darkBlue  xl:leading-[1.1] cursor-pointer font-[500] text-defaultBlue line-clamp-2 uppercase xl:hover:underline"
+                      >
+                        {x.title}
+                      </a>
+                      <div className="text-xs xl:text-sm leading-[1.4] font-bold line-clamp-3">
+                        {x.description}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           )}
           {selectedType === "learningPrograms" && (
