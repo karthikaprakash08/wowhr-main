@@ -1,7 +1,7 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import pic from "../assets/Images/homePic.jpg";
+import pic from "../assets/Images/homePicture.jpg";
 import framedStar from "../assets/SVG/framedStar.svg";
 import { Facebook, Github, Twitter, Instagram, Linkedin } from "lucide-react";
 
