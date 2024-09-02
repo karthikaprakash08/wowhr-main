@@ -10,6 +10,7 @@ import OurService from "./Components/OurService";
 import LandingPage from "./Components/LandingPage";
 import Testimonials from "./Components/Testimonials";
 import ScrollToTop from "./Components/ScrollToTop";
+import JoinCommunity from "./Components/JoinCommunity";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Events />
       <Knowledge />
       <Testimonials />
+      <JoinCommunity/>
       <Footer />
       <ScrollToTop />
     </div>
