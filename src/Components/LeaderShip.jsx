@@ -328,7 +328,7 @@ const LeaderShip = () => {
                           <p className="text-[.5rem] xl:text-[.65rem] leading-relaxed line-clamp-6">
                             {member.description}
                           </p>
-                          <div className="flex justify-between items-center mx-auto mt-2 xl:mt-4 w-[80%]">
+                          {/* <div className="flex justify-between items-center mx-auto mt-2 xl:mt-4 w-[80%]">
                             {member.github && (
                               <a
                                 href={member.github}
@@ -370,6 +370,19 @@ const LeaderShip = () => {
                               >
                                 <div className="w-5 h-5 p-[6px] text-xs transition-all duration-200 rounded-full cursor-pointer xl:p-2 bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
                                   <Twitter className="w-full h-full text-inherit" />
+                                </div>
+                              </a>
+                            )}
+                          </div> */}
+                          <div className="flex justify-center items-center">
+                            {member.linkedIn && (
+                              <a
+                                href={member.linkedIn}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <div className="w-5 h-5 p-[6px] text-xs transition-all duration-200 rounded-full cursor-pointer xl:p-2 bg-darkblue xl:hover:shadow-2xl xl:hover:scale-110 xl:hover:-translate-y-1 xl:hover:bg-white xl:hover:text-darkBlue xl:w-7 xl:h-7 ">
+                                  <Linkedin className="w-full h-full text-inherit" />
                                 </div>
                               </a>
                             )}
