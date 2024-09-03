@@ -42,7 +42,7 @@ const JoinCommunity = () => {
           data-aos="zoom-in"
           data-aos-duration="1000"
         >
-          Join WhatsApp Group
+          Join Student Community
         </a>
       </div>
     </section>
