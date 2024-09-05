@@ -1,0 +1,44 @@
+  const eventData = [
+    {
+      image: event1,
+      heading: "WOW HR",
+      date: "29 NOV, 2023",
+      description:
+        "A well awaited Masterclass on hashtag#hraudit is on our way soon!",
+    },
+    {
+      image: event2,
+      heading: "WOW HR",
+      date: "24 FEB, 2024",
+      description:
+        "We had our first HR Learning Marathon in Hyderabad gathering HR professionals from diversified industrial segments.",
+    },
+    {
+      image: event3,
+      heading: "WOW HR",
+      date: "29 JUL, 2024",
+      description:
+        "Join us for an enlightening conversation at our upcoming HR Conclave: A Dialogue with Visually Impaired Talent.",
+    },
+    {
+      image: event1,
+      heading: "WOW HR",
+      date: "29 NOV, 2023",
+      description:
+        "A well awaited Masterclass on hashtag#hraudit is on our way soon!",
+    },
+    {
+      image: event2,
+      heading: "WOW HR",
+      date: "24 FEB, 2024",
+      description:
+        "We had our first HR Learning Marathon in Hyderabad gathering HR professionals from diversified industrial segments.",
+    },
+    {
+      image: event3,
+      heading: "WOW HR",
+      date: "29 JUL, 2024",
+      description:
+        "Join us for an enlightening conversation at our upcoming HR Conclave: A Dialogue with Visually Impaired Talent.",
+    },
+  ];
