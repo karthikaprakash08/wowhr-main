@@ -7,7 +7,7 @@ const Knowledge = () => {
   const { knowledgeData, loading, error, errorMsg } = useFetchKnowledge();
   // console.log(knowledgeData);
 
-  const [selectedType, setSelectedType] = useState("pepTalks");
+  const [selectedType, setSelectedType] = useState("podcast");
 
   const handleTypeClick = (type) => {
     setSelectedType(type);
@@ -90,7 +90,7 @@ const Knowledge = () => {
         data-aos="fade-up"
         data-aos-duration="750"
       >
-        <button
+        {/* <button
           className={`pb-2 text-xs  pt-1 md:text-2xl xl:text-xl  font-medium text-left border-b-2 xl:hover:text-gray-700 transition-all duration-300 xl:hover:border-gray-700  min-w-20 xl:min-w-40 xl:w-72 md:w-72 font-jost ${
             selectedType === "pepTalks"
               ? "text-black border-black"
@@ -99,7 +99,7 @@ const Knowledge = () => {
           onClick={() => handleTypeClick("pepTalks")}
         >
           Pep Talks
-        </button>
+        </button> */}
         <button
           className={`pb-2 text-xs  pt-1 md:text-2xl xl:text-xl  font-medium text-left  border-b-2 xl:hover:text-gray-700 transition-all duration-300 xl:hover:border-gray-700  min-w-20 xl:min-w-40 xl:w-72 md:w-72 font-jost ${
             selectedType === "podcast"
@@ -136,7 +136,7 @@ const Knowledge = () => {
           data-aos="fade-left"
           data-aos-duration="750"
         >
-          {selectedType === "pepTalks" && (
+          {/* {selectedType === "pepTalks" && (
             <div
               className="flex gap-3 transition-transform duration-300 ease-in-out xl:gap-9 md:gap-9"
               style={{
@@ -177,7 +177,7 @@ const Knowledge = () => {
                       {x.description}
                     </div>
                     <div className="flex items-center gap-2 mt-auto ">
-                      {/* href={x.linkedInLink} */}
+                      href={x.linkedInLink}
                       <img
                         src={x.authorPicture}
                         alt="authorImg"
@@ -191,7 +191,7 @@ const Knowledge = () => {
                 </div>
               ))}
             </div>
-          )}
+          )} */}
           {selectedType === "podcast" && (
             <div className="">
               <div

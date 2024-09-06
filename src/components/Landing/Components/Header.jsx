@@ -110,13 +110,13 @@ const Header = () => {
           href="#partners"
           className="px-4 py-2 mb-0 font-bold text-center text-black transition-all duration-300 rounded-lg hover:shadow-lg hover:mb-2 min-w-28 hover:text-white hover:bg-[#089adec1]"
         >
-          Network
+          Partners
         </a>
         <a
           href="#leadership"
           className="px-4 py-2 mb-0 font-bold text-center text-black transition-all duration-300 rounded-lg hover:shadow-lg hover:mb-2 min-w-28 hover:text-white hover:bg-[#089adec1]"
         >
-          Leadership
+          Our Team
         </a>
         <a
           href="#our-service"

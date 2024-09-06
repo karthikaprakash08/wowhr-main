@@ -2,6 +2,7 @@ import com1 from "../assets/Images/company1.jpg";
 import com2 from "../assets/Images/company2.png";
 import com3 from "../assets/Images/company3.png";
 import com4 from "../assets/Images/company4.png";
+import com5 from "../assets/Images/company5.jpg";
 
 const Partners = () => {
   return (
@@ -23,7 +24,7 @@ const Partners = () => {
           data-aos="fade-right"
           data-aos-duration="750"
         >
-          To be one of the pioneering, dynamic and leading companies that offer
+          To be one of the pioneering, dynamic and leading companies and Institutions that offer
           quality products and services with an understanding of continuous
           improvement in the fields in which it operates.
         </div>
@@ -55,6 +56,13 @@ const Partners = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
             className="object-contain w-16 h-auto sm:w-24"
+          />
+          <img
+            src={com5}
+            alt="com5"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            className="object-contain w-20 h-40 sm:w-28"
           />
         </div>
       </div>

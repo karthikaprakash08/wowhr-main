@@ -47,15 +47,29 @@ const LandingPage = () => {
             WoW HR, a not-for-profit organization intended to create a WoW factor among HR Fraternities and Students community through Skill development. We focus on the segment of Skill Development which supports the individual's to enhance their professional development and developing future leaders. A step forward, we intend to provide exclusive learning experience through different learning formats by Industrial experts.
           </div>
           <div className="flex-col mt-auto xl:mb-10 mb-7" data-aos="fade-up">
+          <div className="flex gap-4"> {/* Use flex container with gap */}
             <a
               href="https://wowhr.in/badge/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg-darkBlue  font-jost text-white text-[.6rem] md:text-base xl:text-sm xl:hover:shadow-lg px-2 md:px-8 xl:px-6 min-w-24 xl:min-w-36 py-2 xl:py-3 font-medium rounded-md xl:hover:bg-[#089adec1] xl:hover:text-white transition-all duration-200 xl:hover:scale-[1.02] xl:hover:translate-y-[-.1rem]">
-                  JOIN US
+              <button className="bg-darkBlue font-jost text-white text-[.6rem] md:text-base xl:text-sm xl:hover:shadow-lg px-2 md:px-8 xl:px-6 min-w-24 xl:min-w-36 py-2 xl:py-3 font-medium rounded-md xl:hover:bg-[#089adec1] xl:hover:text-white transition-all duration-200 xl:hover:scale-[1.02] xl:hover:translate-y-[-.1rem]">
+                JOIN US
               </button>
             </a>
+
+            <a
+              href="https://chat.whatsapp.com/Gnfxll2wN3Y5Mg8kJowpAj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3"
+            >
+              <button className="bg-darkBlue font-jost text-white text-[.6rem] md:text-base xl:text-sm xl:hover:shadow-lg px-2 md:px-8 xl:px-6 min-w-24 xl:min-w-36 py-2 xl:py-3 font-medium rounded-md xl:hover:bg-[#089adec1] xl:hover:text-white transition-all duration-200 xl:hover:scale-[1.02] xl:hover:translate-y-[-.1rem]">
+                JOIN OUR COMMUNITY
+              </button>
+            </a>
+          </div>
+
             
             <div className="flex gap-3 mt-7 " >
               <a
