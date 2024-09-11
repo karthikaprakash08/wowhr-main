@@ -7,11 +7,28 @@ const AboutUs = () => {
   const [showOverview, setShowOverview] = useState(true);
   const [showKeyObjectives, setShowKeyObjectives] = useState(false);
 
+  const videoSrc = "https://www.youtube.com/watch?v=96FElMlOnDo";
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openPopup = () => {
+    console.log("open")
+    setIsOpen(true)};
+  const closePopup = () => setIsOpen(false);
+
   return (
     <section
       id="about-us"
       className="flex flex-col items-center justify-center h-full overflow-hidden bg-white cursor-default py-7 xl:pt-0 xl:min-h-[98vh] xl:items-center xl:flex-row xl:gap-20 xl:px-28 xl:py-0"
     >
+      {isOpen && (
+        <div className="video-popup-overlay" onClick={closePopup}>
+          <div className="video-popup-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={closePopup}>×</button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/96FElMlOnDo?si=onE5PIABqXkAhABV?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      )}
       <div
         className={`w-[50%] mb-7 ${
           showKeyObjectives ? "xl:mb-auto" : "xl:mb-0"
@@ -22,6 +39,10 @@ const AboutUs = () => {
         <img
           src={abtUsFrame}
           alt="abtUsFrame"
+          onClick={openPopup}
+          style={{
+            cursor:"pointer"
+          }}
           className="absolute inset-0 object-contain w-full scale-105 "
         />
         <img src={abtus} alt="abtus" className="object-cover w-full h-auto" />
@@ -176,3 +197,4 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+

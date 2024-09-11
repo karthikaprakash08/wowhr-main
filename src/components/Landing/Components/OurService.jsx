@@ -3,8 +3,8 @@ import CardFrame from "../assets/SVG/cardOuter.jsx";
 import CardIcon1 from "../assets/SVG/card1Icon.jsx";
 import CardIcon2 from "../assets/SVG/card2Icon.jsx";
 import CardIcon3 from "../assets/SVG/card3Icon.jsx";
-import CardIcon4 from "../assets/SVG/card4Icon.jsx";
-
+// import CardIcon4 from "../assets/SVG/card4Icon.jsx";
+import CardIcon4 from "../assets/Images/emphub-logo.png";
 const OurService = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
@@ -72,10 +72,10 @@ const OurService = () => {
                 isHovered4 ? "text-white" : "text-black"
               }`}
             >
-              <CardIcon4
-                filler={isHovered4 ? "#ffffff" : "#1850A8"}
-                innerClass={isHovered4 ? "#011329" : "#ffffff"}
-                className={`w-6 h-6 mb-2 md:w-12 md:h-12 xl:w-auto xl:mb-5 xl:h-auto`}
+              <img
+                src={CardIcon4}  
+                alt="Logo"
+                className={`w-3 h-3 mb-2 md:w-6 md:h-6 xl:w-auto xl:mb-5 xl:h-10`}
               />
               <div className="mb-4 text-sm font-bold md:text-2xl xl:text-xl ">
                 Jobs

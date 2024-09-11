@@ -11,7 +11,7 @@ const Partners = () => {
       className="flex flex-col items-center justify-center h-full overflow-hidden bg-white cursor-default md:h-full sm:h-screen"
     >
       <div className="my-4 sm:mt-0 sm:mb-24"></div>
-      <div className="max-w-6xl">
+      <div className="max-w-8xl">
         <div
           className="mb-5 text-xl font-semibold text-center sm:text-3xl md:text-4xl xl:text-3xl font-jost sm:mb-9"
           data-aos="fade-right"
@@ -20,7 +20,7 @@ const Partners = () => {
           BUSINESS PARTNERS
         </div>
         <div
-          className=" md:text-2xl text-xs sm:text-lg font-semibold text-center tracking-wider lg:leading-[1.9] xl:text-lg md:leading-[1.7] mb-8 md:mb-20 mx-auto w-[78%]"
+          className="md:text-2xl text-xs sm:text-lg font-semibold text-center tracking-wider lg:leading-[1.9] xl:text-lg md:leading-[1.7] mb-8 md:mb-20 mx-auto w-[78%]"
           data-aos="fade-right"
           data-aos-duration="750"
         >
@@ -28,42 +28,60 @@ const Partners = () => {
           quality products and services with an understanding of continuous
           improvement in the fields in which it operates.
         </div>
-        <div className="flex justify-between w-full mb-10 sm:mb-20">
-          <img
-            src={com1}
-            alt="com1"
-            data-aos="fade-left"
-            data-aos-duration="250"
-            className="object-contain w-24 h-auto sm:w-44"
-          />
-          <img
-            src={com3}
-            alt="com3"
-            data-aos="fade-left"
-            data-aos-duration="500"
-            className="object-contain w-24 h-auto sm:w-44"
-          />
-          <img
-            src={com2}
-            alt="com2"
-            data-aos="fade-left"
-            data-aos-duration="750"
-            className="object-contain w-20 h-auto sm:w-36"
-          />
-          <img
-            src={com4}
-            alt="com4"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            className="object-contain w-16 h-auto sm:w-24"
-          />
-          <img
-            src={com5}
-            alt="com5"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            className="object-contain w-20 h-40 sm:w-28"
-          />
+        <div className="relative w-full overflow-hidden">
+          <div style={{gap:"130px"}} className="inset-0 flex whitespace-nowrap animate-marquee">
+            <img
+              src={com1}
+              alt="com1"
+              className="object-contain w-24 h-auto sm:w-44 mx-4"
+            />
+            <img
+              src={com3}
+              alt="com3"
+              className="object-contain w-24 h-auto sm:w-44 mx-4"
+            />
+            <img
+              src={com2}
+              alt="com2"
+              className="object-contain w-20 h-auto sm:w-36 mx-4"
+            />
+            <img
+              src={com4}
+              alt="com4"
+              className="object-contain w-16 h-auto sm:w-24 mx-4"
+            />
+            <img
+              src={com5}
+              alt="com5"
+              className="object-contain w-20 h-40 sm:w-28 mx-4"
+            />
+            {/* Duplicate images to ensure smooth scrolling */}
+            <img
+              src={com1}
+              alt="com1"
+              className="object-contain w-24 h-auto sm:w-44 mx-4"
+            />
+            <img
+              src={com3}
+              alt="com3"
+              className="object-contain w-24 h-auto sm:w-44 mx-4"
+            />
+            <img
+              src={com2}
+              alt="com2"
+              className="object-contain w-20 h-auto sm:w-36 mx-4"
+            />
+            <img
+              src={com4}
+              alt="com4"
+              className="object-contain w-16 h-auto sm:w-24 mx-4"
+            />
+            <img
+              src={com5}
+              alt="com5"
+              className="object-contain w-20 h-40 sm:w-28 mx-4"
+            />
+          </div>
         </div>
       </div>
     </section>

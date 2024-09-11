@@ -12,6 +12,7 @@ import {
   Twitter,
   Facebook,
   Linkedin,
+  ShieldCheck,
 } from "lucide-react";
 
 const Footer = () => {
@@ -225,6 +226,18 @@ const Footer = () => {
                   <Linkedin className="w-full h-auto" />
                 </div>{" "}
               </a>
+
+              <a
+                href="/admin "
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                <div className="w-6 h-6 p-1 text-xs transition-all xl:hover:-translate-y-[2px] translate-y-0 cursor-pointer md:w-7 md:h-7 xl:w-8 xl:p-2 xl:h-8  xl:hover:text-gray-400 duration-300  ">
+                  <ShieldCheck className="w-full h-auto" />
+                </div>{" "}
+              </a>
+              
             </div>
           </div>
         </div>
