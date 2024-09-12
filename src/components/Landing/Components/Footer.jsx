@@ -3,6 +3,7 @@ import f2 from "../assets/Images/f2.jpg";
 import f3 from "../assets/Images/f3.jpg";
 import f4 from "../assets/Images/f4.jpg";
 import logo from "../assets/Images/WowHRLogo.png";
+import React, { useState } from "react";
 import {
   MapPin,
   PhoneCall,
@@ -16,6 +17,23 @@ import {
 } from "lucide-react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+
+    if (email.trim() === "") {
+      setMessage("Please enter a valid email.");
+      return;
+    }
+
+    setMessage("Thanks for subscribing!");
+    setEmail("");
+    setIsSubscribed(true); 
+  };
+
   return (
     <section
       id="footer"
@@ -49,17 +67,28 @@ const Footer = () => {
                 factor among HR Fraternities and Students community through
                 Skill development.
               </div>
-              <div className="flex justify-between border-b border-gray-500">
-                <input
-                  type="email"
-                  className="w-full p-1 xl:p-2 text-[.65rem] xl:text-sm md:text-sm text-white bg-transparent"
-                  placeholder="Your E-Mail"
-                />
-                <button className="px-2 xl:px-4 py-1 mb-1 text-[.65rem] xl:text-xs font-bold tracking-wide bg-white rounded-full transition-all duration-300 xl:hover:text-white xl:hover:bg-[#089adec1] xl:hover:translate-y-[-.25rem]  text-defaultBlue">
-                  <a href="mailto:Connect@wowhr.in" className="font-bold">
-                    SUBSCRIBE
-                  </a>
-                </button>
+              <div>
+                <form onSubmit={handleSubscribe}>
+                  <div className="flex justify-between border-b border-gray-500">
+                    <input
+                      type="email"
+                      className="w-full p-1 xl:p-2 text-[.65rem] xl:text-sm md:text-sm text-white bg-transparent"
+                      placeholder="Your E-Mail"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      disabled={isSubscribed} // Disable input after subscribing
+                      required
+                    />
+                    <button
+                      type="submit"
+                      className="px-2 xl:px-4 py-1 mb-1 text-[.65rem] xl:text-xs font-bold tracking-wide bg-white rounded-full transition-all duration-300 xl:hover:text-white xl:hover:bg-[#089adec1] xl:hover:translate-y-[-.25rem] text-defaultBlue"
+                      disabled={isSubscribed} 
+                    >
+                      {isSubscribed ? "Subscribed" : "SUBSCRIBE"} 
+                    </button>
+                  </div>
+                </form>
+                {message && <div className="mt-2 text-sm text-green-500">{message}</div>}
               </div>
             </div>
             <div className="flex gap-2 mb-auto xl:gap-0 mt-7 xl:mt-2 xl:px-16 ">
@@ -144,7 +173,7 @@ const Footer = () => {
                   <div className="">
                     <div className="">Our Address:</div>
                     <div className="">
-                      Old Westbury 256, New York 11201, United States
+                      Chennai
                     </div>
                   </div>
                 </a>

@@ -78,7 +78,7 @@ const OurService = () => {
                 className={`w-3 h-3 mb-2 md:w-6 md:h-6 xl:w-auto xl:mb-5 xl:h-10`}
               />
               <div className="mb-4 text-sm font-bold md:text-2xl xl:text-xl ">
-                Jobs
+                Emploihub
               </div>
               <div className="md:text-lg text-xs xl:text-base font-semibold text-left xl:leading-[1.5] min-h-[3rem] xl:min-h-[5rem]  line-clamp-4">
                 Presenting a platform where HR Talents meets Recruiters.
