@@ -1,9 +1,9 @@
+import { useState } from "react";
 import f1 from "../assets/Images/f1.png";
 import f2 from "../assets/Images/f2.jpg";
 import f3 from "../assets/Images/f3.jpg";
 import f4 from "../assets/Images/f4.jpg";
 import logo from "../assets/Images/WowHRLogo.png";
-import React, { useState } from "react";
 import {
   MapPin,
   PhoneCall,
@@ -15,24 +15,33 @@ import {
   Linkedin,
   ShieldCheck,
 } from "lucide-react";
+import { toast } from "react-toastify";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../../firebase";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+
+  const [email, setVisitorEmail] = useState('')
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-
-    if (email.trim() === "") {
-      setMessage("Please enter a valid email.");
-      return;
+  const submitEmail = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  if (emailRegex.test(email)) {
+    try {
+      await addDoc(collection(db, "subscriptions"), {
+        email,
+        timestamp: new Date(),
+      });
+      setIsSubscribed(true);
+      setVisitorEmail("");
+    } catch (error) {
+      console.error("Error saving subscription: ", error);
     }
-
-    setMessage("Thanks for subscribing!");
-    setEmail("");
-    setIsSubscribed(true); 
-  };
+  } else {
+    alert("Please enter a valid email address."); 
+  }
+};
 
   return (
     <section
@@ -67,29 +76,28 @@ const Footer = () => {
                 factor among HR Fraternities and Students community through
                 Skill development.
               </div>
-              <div>
-                <form onSubmit={handleSubscribe}>
-                  <div className="flex justify-between border-b border-gray-500">
-                    <input
-                      type="email"
-                      className="w-full p-1 xl:p-2 text-[.65rem] xl:text-sm md:text-sm text-white bg-transparent"
-                      placeholder="Your E-Mail"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      disabled={isSubscribed} // Disable input after subscribing
-                      required
-                    />
-                    <button
-                      type="submit"
-                      className="px-2 xl:px-4 py-1 mb-1 text-[.65rem] xl:text-xs font-bold tracking-wide bg-white rounded-full transition-all duration-300 xl:hover:text-white xl:hover:bg-[#089adec1] xl:hover:translate-y-[-.25rem] text-defaultBlue"
-                      disabled={isSubscribed} 
-                    >
-                      {isSubscribed ? "Subscribed" : "SUBSCRIBE"} 
-                    </button>
-                  </div>
-                </form>
-                {message && <div className="mt-2 text-sm text-green-500">{message}</div>}
+              <div className="flex justify-between border-b border-gray-500">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setVisitorEmail(e.target.value)}
+                  className="w-full p-1 xl:p-2 text-[.65rem] xl:text-sm md:text-sm text-white bg-transparent"
+                  placeholder="Your E-Mail"
+                  disabled={isSubscribed}
+                />
+                <button
+                  onClick={() => submitEmail()}
+                  className="px-2 xl:px-4 py-1 mb-1 text-[.65rem] xl:text-xs font-bold tracking-wide bg-white rounded-full transition-all duration-300 text-black xl:hover:text-white xl:hover:bg-[#089adec1] xl:hover:translate-y-[-.25rem]  text-defaultBlue">
+                  <a  className="font-bold">
+                    {isSubscribed ? ' SUBSCRIBED' : ' SUBSCRIBE'}
+                  </a>
+                </button>
               </div>
+              {isSubscribed && (
+                <div className="text-sm text-green-400 mt-2">
+                  Thanks for your subscription 🥳  {/* Display success message */}
+                </div>
+              )}
             </div>
             <div className="flex gap-2 mb-auto xl:gap-0 mt-7 xl:mt-2 xl:px-16 ">
               <div
@@ -173,7 +181,7 @@ const Footer = () => {
                   <div className="">
                     <div className="">Our Address:</div>
                     <div className="">
-                      Chennai
+                      Old Westbury 256, New York 11201, United States
                     </div>
                   </div>
                 </a>
@@ -266,7 +274,6 @@ const Footer = () => {
                   <ShieldCheck className="w-full h-auto" />
                 </div>{" "}
               </a>
-              
             </div>
           </div>
         </div>

@@ -45,8 +45,7 @@ const Partners = () => {
           quality products and services with an understanding of continuous
           improvement in the fields in which it operates.
         </div>
-        <div className="relative w-full overflow-hidden">
-          <div style={{gap:"130px"}} className="inset-0 flex whitespace-nowrap animate-marquee">
+        <div className="flex justify-between w-full mb-10 sm:mb-20">
           {
             partners && partners?.map((partner) => (
               <img
@@ -59,7 +58,6 @@ const Partners = () => {
               />
             ))
           }
-          </div>
         </div>
       </div>
     </section>

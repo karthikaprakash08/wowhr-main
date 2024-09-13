@@ -125,6 +125,28 @@ const Sidebar = () => {
       </div>
 
       <div
+        onClick={() => navigate("/admin/subscribes")}
+        className={`w-full h-11 cursor-pointer ${pathMatch("/admin/subscribes") && "bg-[#2984FF]"
+          }  p-1 rounded-lg flex items-center pl-4`}
+      >
+        <img
+          src={
+            pathMatch("/admin/subscribes")
+              ? assets.Img.Knowledge_white
+              : assets.Img.Knowledge_gray
+          }
+          alt="icon"
+          className="w-10 h-7 object-contain"
+        />
+        <p
+          className={`${pathMatch("/admin/subscribes") ? "text-white" : "text-gray-500"
+            }`}
+        >
+          Subscribes
+        </p>
+      </div>
+
+      <div
         onClick={() => navigate("/")}
         className="w-full h-11 mt-auto cursor-pointer p-1 rounded-lg flex items-center pl-4 "
       >
