@@ -265,7 +265,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="/admin "
+                href="./admin "
                 target="_blank"
                 rel="noopener noreferrer"
                 className=""
