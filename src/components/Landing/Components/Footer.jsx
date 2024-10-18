@@ -18,9 +18,11 @@ import {
 import { toast } from "react-toastify";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../firebase";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
 
+  const navigate = useNavigate();
   const [email, setVisitorEmail] = useState('')
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -265,8 +267,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="./admin "
-                target="_blank"
+                onClick={()=>(navigate("./admin"))}
                 rel="noopener noreferrer"
                 className=""
               >
