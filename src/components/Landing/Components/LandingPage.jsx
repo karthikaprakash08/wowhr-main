@@ -72,7 +72,7 @@ const LandingPage = () => {
 
             
             <div className="flex gap-3 mt-7 " >
-              <a
+              {/* <a
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -83,7 +83,7 @@ const LandingPage = () => {
                 <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
                   <Facebook className="w-full h-auto" />
                 </div>
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/company/wow-hr/"
                 target="_blank"
@@ -97,7 +97,7 @@ const LandingPage = () => {
                 </div>
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/wowhr2023/"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-aos="fade-up"
@@ -108,7 +108,7 @@ const LandingPage = () => {
                   <Instagram className="w-full h-auto" />
                 </div>
               </a>
-              <a
+              {/* <a
                 href="https://www.github.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -119,8 +119,8 @@ const LandingPage = () => {
                 <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
                   <Github className="w-full h-auto" />
                 </div>
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="https://www.x.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -131,7 +131,7 @@ const LandingPage = () => {
                 <div className="bg-white xl:hover:shadow-2xl xl:hover:border-white cursor-pointer xl:hover:scale-110 xl:hover:-translate-y-2 xl:hover:bg-lightBlue duration-200 xl:hover:text-white transition-all border-gray-300 border-[1px] rounded-full md:w-7 md:h-7 w-6 xl:w-8 p-1 xl:p-2 h-6 xl:h-8 text-xs afterPoint">
                   <Twitter className="w-full h-auto" />
                 </div>
-              </a>
+              </a> */}
             </div>
             </div>
         </div>
